@@ -1,12 +1,12 @@
 //your JS code here. If required.
-const boxes=document.querySelectorAll(".box");
-        boxes.forEach((box)=>{
+const boxes=document.querySelectorAll(".square");
+        boxes.forEach((square)=>{
             box.addEventListener("mouseover",(event)=>{
                 console.log(event.target.id);
                 ChangeColor(event.target.id);
             })
             box.addEventListener("mouseout",(event)=>{
-                boxes.forEach((box)=>{
+                boxes.forEach((square)=>{
                     box.style.backgroundColor="grey";
                 })
             })
@@ -14,7 +14,7 @@ const boxes=document.querySelectorAll(".box");
         })
 
         function ChangeColor(hoveredBoxId){
-            boxes.forEach((box)=>{
+            boxes.forEach((square)=>{
                 if(box.id!=hoveredBoxId){
                     box.style.backgroundColor="brown";
                 }
